@@ -36,6 +36,11 @@ float last_deltas[3];
 
 void app_init()
 {
+    // Orient coordinate system
+    gs_absolute_up = gs_v3(0, 0, 1.0f);
+    gs_absolute_forward = gs_v3(0, 1.0f, 0);
+    gs_absolute_right = gs_v3(1.0f, 0, 0);
+
     render_ctx_init();
     gsi = render_ctx_get_gsi();
 
